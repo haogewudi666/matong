@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number">
+    <button>加入购物车</button>
+    <button>查看购物车</button>
+    <script src="./lib/jquery.min.js"></script>
+    <script>
+        //点击购物车,把商品加入数据库
+        $('button').eq(0).click(function(){
+            $.ajax({
+                url:'http://localhost/interface/addwq.php',
+                data:{
+                    id:'1',
+                    name:'马桶',
+                    price:7898,
+                    img:'../images/main01_071.jpg',
+                    num:$('input').val()
+                },
+                success:function(res){
+                    if(res.code){
+                        alert('商品加入成功')
+                    }    
+                },
+                dataType:'json'
+            })
+        })
+        //点击查看购物车,进入购物车页面
+        $('button').eq(1).click(function(){
+            location.href="./cart.html"
+        })
+    </script>
+</body>
+</html>

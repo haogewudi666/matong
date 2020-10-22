@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册会员</title>
+    <style type="text/css">
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background: #c9c9c9;
+        }
+        .head{
+          width: 100%;
+          background: white;
+      }
+      .banxin{
+          width: 1200px;
+          height: 92px;
+          margin: 0 auto;
+      }
+      .banxin img{
+          margin-top:34px;
+      }
+      .logo{
+          float: left;
+      }
+      .daohang{
+        float: left;
+        margin-left: 95px;
+      }
+      .daohang a{
+          text-decoration: none;
+          color: black;
+          text-align: center;
+          line-height: 92px;
+          margin-right: 40px;
+      }
+      .dianji p{
+          float:right;
+          color: #c9c9c9;
+      }
+      .dianji p a{
+        text-decoration: none;
+        color: black;
+        line-height: 92px;
+      }
+      .main{
+          width: 100%;
+      }
+      .banxin2{
+          width: 600px;
+          height: 400px;
+          background: white;
+          margin:0 auto;
+          margin-top: 40px;
+      }
+      .banxin2 h2{
+          text-align: center;
+          padding-top: 20px;
+          margin-bottom: 30px;
+      }
+      input{
+          outline: none;
+      }
+      .username{
+          margin-left: 200px;
+      }
+      .password{
+        margin-left: 200px;
+        margin-top:40px;
+      }
+      .dui{
+          margin-left: 200px;
+      }
+      .yanzheng{
+          margin-left: 200px;
+          margin-top:40px;
+          margin-bottom: 50px;
+      }
+      .tijiao{
+          width:150px;
+          height:60px;
+          border: none;
+          background: #355789;
+          color:white;
+          margin-top: 24px;
+          margin-left: 230px;
+      }
+       </style>
+      
+</head>
+
+<body>
+    <div class="head">
+        <div class="banxin">
+            <div class="logo"><img src="images/logo_03.gif"></div>
+            <div class="daohang">
+                <a href="">欢迎注册</a>
+            </div>
+            <div class="dianji">
+                <p>已有帐号,<a href="login.html">请登录</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="banxin2">
+                 <h2>会员注册</h2>
+                 <div class="username">
+                     *用户名: <input type="text" class="user">
+                 </div>
+                 <div class="password">
+                    *密&nbsp;&nbsp;&nbsp;码: <input type="text" class="pass">
+                </div>
+                <div class="yanzheng">
+                    <label>
+                    *验证码: <input type="text"  />
+                    <span id="yz" style=" background:url(./images/1.png) -10px -15px;width:80px;font-style: italic; height: 20px;border: 1px solid black;display: inline-block;"></span>
+                    <a href="javascript:;" id='btn'>看不清</a>
+                </label>
+                </div>
+                <div class="dui">
+                    <input type="checkbox">我已同意用户协议
+                </div>
+                   <input type="button" value="点击注册" class="tijiao">
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="public.js"></script>
+    <script>
+        function showCode(){
+            var code = "";
+            for(var i=0;i<6;i++){
+                 var num = rand(48,57);
+                 code += String.fromCharCode(num);
+            }
+            $id('yz').innerHTML = code;
+        }
+       
+    
+        window.onload = function(){
+            showCode();
+            $id('btn').onclick=showCode;
+        }
+        
+        $('.tijiao').click(function(){
+            
+            $.ajax({
+                url:"http://localhost/zhuce.php",
+                type:'post',
+                data:{
+                    name:$('.user').val(),
+                    word:$('.pass').val(),
+                },
+                success:function(res){
+                    console.log(res)
+                    if(res==1){
+                        location.href="login.html"
+                    }else{
+                        $('.tainxie').val('输入格式有错误')
+                    }
+                },
+                cache:false,
+            })
+        })
+    </script>
+</body>
+</html>

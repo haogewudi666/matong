@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品信息</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .head{
+          width: 100%;
+          background: #f2f2f2;
+          position: fixed;
+          top: 0;
+          left:0;
+      
+      }
+      .banxin{
+          width:1200px;
+          height: 36px;
+          margin:0 auto;
+          background: #f2f2f2;
+          line-height: 36px;
+          color: #999999;
+      }
+      .banxin a{
+          text-decoration: none;color: #999999;
+      }
+      .left{
+          float: left;
+          margin-left: 110px;
+      }
+      .right{
+          float: right;         
+      }
+      .right a{
+        margin-left: 36px;
+      }
+      .nav{
+          width: 100%;
+          margin-top: 36px;
+      }
+      .banxin2{
+          width: 1200px;
+          height: 92px;
+          margin: 0 auto;
+      }
+      .banxin2 img{
+          margin-top:34px;
+      }
+      .logo{
+          float: left;
+      }
+      .daohang{
+        float: left;
+        margin-left: 95px;
+      }
+      .daohang a{
+          text-decoration: none;color: #89a1be;
+          text-align: center;
+          line-height: 92px;
+          margin-right: 40px;
+      }
+      .sousuo{
+          float: right;
+      }
+      input{
+          outline: none;
+      }
+      .shuru{
+          width: 206px;
+          height:42px;
+          border: 1px solid #c9c9c9;
+          margin-top: 24px;
+      }
+      .dianji{
+          width:78px;
+          height: 44px;
+          border: none;
+          background: #355789;
+          color:white;
+          margin-top: 24px;
+      }
+      .main3{
+          width: 100%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+      }
+      .banxin8{
+          width: 1200px;
+          height: 65px;
+          margin: 0 auto;
+          border-bottom: 1px solid #c9c9c9;
+      }
+      .banxin8 ul{
+          list-style: none;
+          display: flex;
+      }
+      .banxin8 ul li{
+          text-align: center;
+          line-height: 65px;
+          flex: 1;
+      }
+      .banxin8 ul li a{
+          color:black;
+          text-decoration: none;
+      }
+      .foot{
+          width: 100%;
+      }
+      .banxin9{
+          width: 1200px;
+          height:260px;
+          margin:0 auto;
+          border-bottom: 1px solid #c9c9c9;
+      }
+      .foot-left{
+          width: 900px;
+          float: left;
+      }
+      .foot-left ul{
+          list-style: none;
+          float: left;
+          margin-right: 100px;
+      }
+      .foot-left ul li{
+          margin:15px 0  15px 0;
+      }
+      
+      .foot-left ul li a{
+          color:#c9c9c9;
+          text-decoration: none;
+      }
+      .foot-left ul li a h4{
+          color: black;
+      }
+      .foot-right{
+          width:290px;
+          height: 260px;
+          float: left;
+      }
+      .foot-right h2{
+          text-align: center;
+          margin-top: 15px;
+          margin-bottom: 20px;
+      }
+      .foot-right p{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .foot-right img{
+          margin-left: 62px;
+      }
+      .feet{
+          width:100%;
+      }
+      .banxin10{
+          width: 1200px;
+          height:90px;
+          margin: 0 auto;
+      }
+      .banxin10 p{
+          text-align: center;
+          color:black;
+          line-height: 90px;
+      }
+      .xinxi{
+          width: 100%;
+          background:white;
+      }
+      .banxin4{
+          width: 1200px;
+          height: 600px;
+          margin: 0 auto;
+          background: white;
+      }
+      .xinxi p{
+          text-align: center;
+          line-height: 30px;
+      }
+      .xx{
+          float: right;
+          color: black;
+
+      }
+      .xx span{
+          color: orange;
+          font-size: 28px;
+          font-weight: 600;
+      }
+      .jiage{
+        width: 630px;
+        height: 100px;
+        font-size: 20px;
+        line-height: 100px;
+      }
+      .xxname{
+          margin-top: 10px;
+      }
+      .xxname h2{
+        margin-top: 40px;
+      }
+      .cuxiao{
+        width: 630px;
+        height: 100px;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      .cuxiao span{
+          color:red;
+          font-size: 20px;
+          font-weight:normal;
+      }
+      .tijiao{
+          width:150px;
+          height:60px;
+          border: none;
+          background: #355789;
+          color:white;
+          margin-top: 24px;
+          margin-left: 100px;
+          font-size: 18px;
+      }
+		#big{
+			width: 400px;
+			height: 400px;
+			border: 1px solid #000;
+			overflow: hidden;
+			position: absolute;
+			top:0;
+			left : 360px;
+			display: none;
+		}
+        .pic{
+            float: left;
+        }
+        .pic img{
+            margin-top: 60px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="banxin">
+            <div class="left">HI,欢迎来到九牧商城，请&nbsp;<a href="login.html">登录</a>&nbsp;|&nbsp;<a href="submit.html">注册</a></div>
+            <div class="right"><a href="">我的九牧</a><a href="">消息通知</a><a href="">帮助中心</a><a href="shopcar.html">购物车</a></div>
+        </div>
+  </div>
+  <div class="nav"> 
+      <div class="banxin2">
+          <div class="logo"><img src="images/logo_03.gif"></div>
+          <div class="daohang">
+              <a href="zhuye.html">首页</a>
+              <a href="">服务支持</a>
+              <a href="">附近门店</a>
+              <a href="">招商信息</a>
+          </div>
+          <div class="sousuo">
+              <input type="text" class="shuru"><input type="button" value="搜索" class="dianji">
+          </div>
+      </div>
+  </div>
+  <div class="xinxi">
+      <div class="banxin4">
+        <h4>商品信息/ 全部商品分类 / 马桶 / 智能马桶 / 【门店同款】JOMOO ZD8990助便畅洗自动翻盖i9PRO智能一体机</h4>
+          <div class="pic">
+           <img src="images/main01_071.jpg">
+          </div>
+          <div class="xx">
+              <div class="xxname"><h2>【门店同款】JOMOO ZD8990助便畅洗自动翻盖i9PRO智能一体机</h2></div>
+              <div class="jiage">&nbsp;价格:<span> ￥&nbsp;7&nbsp;8&nbsp;9&nbsp;8</span></div>
+              <div class="cuxiao">&nbsp;促销:<span> &nbsp;满199包邮到家</span></div>
+              <div class="add"><input type="number">
+                <button>加入购物车</button>
+                <button>查看购物车</button>
+                </div>
+          </div>
+      </div>
+  </div>
+  <div class="main3">
+    <div class="banxin8">
+        <ul>
+            <li><a href=""><img src="images/main3_03.gif">2000余家服务网点</a></li>
+            <li><a href=""><img src="images/main3_05.gif">顺丰发货</a></li>
+            <li><a href=""><img src="images/main3_07.gif">15天无理由退货</a></li>
+            <li><a href=""><img src="images/main3_09.gif">100%正品保证</a></li>
+        </ul>
+    </div>
+</div>
+<div class="foot">
+    <div class="banxin9">
+      <div class="foot-left">
+        <ul>
+            <li><a href=""><h4>购物指南</h4></a></li>
+            <li><a href="">购物指南</a></li>
+            <li><a href="">客服工作时间</a></li>
+            <li><a href="">用户注册</a></li>
+            <li><a href="">优惠券使用中心</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><h4>支付指南</h4></a></li>
+            <li><a href="">退款说明</a></li>
+            <li><a href="">付款时间</a></li>
+            <li><a href="">付款方式</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><h4>配送验收</h4></a></li>
+            <li><a href="">验货与签收</a></li>
+            <li><a href="">配送方式</a></li>
+            <li><a href="">快递查询</a></li>
+            <li><a href="">免费仓储说明</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><h4>售后服务</h4></a></li>
+            <li><a href="">发票服务</a></li>
+            <li><a href="">退换货服务</a></li>
+            <li><a href="">防伪查询</a></li>
+            <li><a href="">保障服务</a></li>
+            <li><a href="">总裁信箱</a></li>
+        </ul>
+        <ul style="margin-right: 20px;">
+            <li><a href=""><h4>商务合作</h4></a></li>
+            <li><a href="">企业团购</a></li>
+            <li><a href="">商家入驻</a></li>
+        </ul>
+      </div>
+      <div class="foot-right">
+        <h2>400-1919-999</h2>
+        <p>服务时间:8:00~20:00</p>
+        <div><a href=""><img src="images/foot_03.gif"></a></div>
+      </div>
+    </div>
+</div>
+<div class="feet">
+    <div class="banxin10">
+        <p>
+            Copyright&nbsp;2013-2018&nbsp;九牧厨卫股份有限公司&nbsp;版权所有&nbsp;保留一切权利&nbsp;闽ICP备11009004号-1
+        </p>
+    </div>
+</div>
+<script type="text/javascript" src="./public.js"></script>
+<script src="./lib/jquery.min.js"></script>
+                <script>
+                    //点击购物车,把商品加入数据库
+                    $('button').eq(0).click(function(){
+                        $.ajax({
+                            url:'http://localhost/interface/addwq.php',
+                            data:{
+                                id:'1',
+                                name:'马桶',
+                                price:7898,
+                                img:'../images/main01_071.jpg',
+                                num:$('input').val()
+                            },
+                            success:function(res){
+                                if(res.code){
+                                    alert('商品加入成功')
+                                }    
+                            },
+                            dataType:'json'
+                        })
+                    })
+                    //点击查看购物车,进入购物车页面
+                    $('button').eq(1).click(function(){
+                        location.href="./cart.html"
+                    })
+                </script>
+</body>
+</html>

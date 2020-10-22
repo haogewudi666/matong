@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九牧商城</title>
+    <link rel="stylesheet" href="./jslbt/css/css.css" type="text/css">
+    <script src="./jslbt/js/js.js"></script>
+    <style type="text/css">
+      *{
+          margin:0;padding: 0;
+      }
+      html,body{
+          background-color: white;width: 100%;height: 100%  ;
+      }
+
+      .head{
+          width: 100%;
+          background: #f2f2f2;
+          position: fixed;
+          top: 0;
+          left:0;
+      
+      }
+      .banxin{
+          width:1200px;
+          height: 36px;
+          margin:0 auto;
+          background: #f2f2f2;
+          line-height: 36px;
+          color: #999999;
+      }
+      .banxin a{
+          text-decoration: none;color: #999999;
+      }
+      .left{
+          float: left;
+          margin-left: 110px;
+      }
+      .right{
+          float: right;         
+      }
+      .right a{
+        margin-left: 36px;
+      }
+      .nav{
+          width: 100%;
+          margin-top: 36px;
+      }
+      .banxin2{
+          width: 1200px;
+          height: 92px;
+          margin: 0 auto;
+      }
+      .banxin2 img{
+          margin-top:34px;
+      }
+      .logo{
+          float: left;
+      }
+      .daohang{
+        float: left;
+        margin-left: 95px;
+      }
+      .daohang a{
+          text-decoration: none;color: #89a1be;
+          text-align: center;
+          line-height: 92px;
+          margin-right: 40px;
+      }
+      .sousuo{
+          float: right;
+      }
+      input{
+          outline: none;
+      }
+      .shuru{
+          width: 206px;
+          height:42px;
+          border: 1px solid #c9c9c9;
+          margin-top: 24px;
+      }
+      .dianji{
+          width:78px;
+          height: 44px;
+          border: none;
+          background: #355789;
+          color:white;
+          margin-top: 24px;
+      }
+      .banner{
+          width: 100%;
+      }
+      .banxin3{
+          width:1920px;
+          height: 540px;
+          margin: 0 auto;
+      }
+      .news{
+          width: 100%;
+          background: #ffffff;
+          margin-top: 20px;
+      }
+      .banxin4{
+          width: 1200px;
+          height: 250px;
+          margin: 0 auto;
+      }
+      .banxin4 img{
+           margin-right: 30px;
+           width: 370px;
+           height: 250px;
+      }
+      .main{
+          width: 100%;
+          margin-top: 25px;
+      }
+      .banxin5{
+          width: 1200px;
+          height: 1038px;
+          margin: 0 auto;
+      }
+      .banxin5 h2{
+          text-align: center;
+          margin-bottom: 93px;
+      }
+      .xilie{
+          height:106px;
+          width: 1200px;
+          display: flex;
+          text-align: center;
+      }
+      .xilie dl{
+          margin-right: 74px;
+      }
+      .xilie2{
+          width:1200px;
+          height:800px;
+      }
+      .xilie2-1{
+          float: left;
+      }
+      .xilie2-2{
+          float: left;
+          margin-bottom: 30px;
+      }
+      .xilie2-3{
+          float: left;
+      }
+      .news1{
+          width: 100%;
+      }
+      .banxin6{
+          width:1200px;
+          height: 180px;
+          margin: 0 auto;
+      }
+      .jishiqi{
+          width: 100%;
+      }
+      .banxin7{
+          width: 1200px;
+          height:90px;
+          margin: 0 auto;
+      }
+      .main3{
+          width: 100%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+      }
+      .banxin8{
+          width: 1200px;
+          height: 65px;
+          margin: 0 auto;
+          border-bottom: 1px solid #c9c9c9;
+      }
+      .banxin8 ul{
+          list-style: none;
+          display: flex;
+      }
+      .banxin8 ul li{
+          text-align: center;
+          line-height: 65px;
+          flex: 1;
+      }
+      .banxin8 ul li a{
+          color:black;
+          text-decoration: none;
+      }
+      .foot{
+          width: 100%;
+      }
+      .banxin9{
+          width: 1200px;
+          height:260px;
+          margin:0 auto;
+          border-bottom: 1px solid #c9c9c9;
+      }
+      .foot-left{
+          width: 900px;
+          float: left;
+      }
+      .foot-left ul{
+          list-style: none;
+          float: left;
+          margin-right: 100px;
+      }
+      .foot-left ul li{
+          margin:15px 0  15px 0;
+      }
+      
+      .foot-left ul li a{
+          color:#c9c9c9;
+          text-decoration: none;
+      }
+      .foot-left ul li a h4{
+          color: black;
+      }
+      .foot-right{
+          width:290px;
+          height: 260px;
+          float: left;
+      }
+      .foot-right h2{
+          text-align: center;
+          margin-top: 15px;
+          margin-bottom: 20px;
+      }
+      .foot-right p{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .foot-right img{
+          margin-left: 62px;
+      }
+      .feet{
+          width:100%;
+      }
+      .banxin10{
+          width: 1200px;
+          height:90px;
+          margin: 0 auto;
+      }
+      .banxin10 p{
+          text-align: center;
+          color:black;
+          line-height: 90px;
+      }
+      .daojishi{
+          color:red;
+          font-size: 20px;
+          font-weight: 600;
+          margin-top: 20px;
+      }
+    </style>
+</head>
+<body>
+    <div class="head">
+          <div class="banxin">
+              <div class="left">HI,欢迎来到九牧商城，请&nbsp;<a href="login.html">登录</a>&nbsp;|&nbsp;<a href="submit.html">注册</a></div>
+              <div class="right"><a href="">我的九牧</a><a href="">消息通知</a><a href="">帮助中心</a><a href="cart.html">购物车</a></div>
+          </div>
+    </div>
+    <div class="nav">
+        <div class="banxin2">
+            <div class="logo"><img src="images/logo_03.gif"></div>
+            <div class="daohang">
+                <a href="zhuye.html">首页</a>
+                <a href="">服务支持</a>
+                <a href="">附近门店</a>
+                <a href="">招商信息</a>
+            </div>
+            <div class="sousuo">
+                <input type="text" class="shuru"><input type="button" value="搜索" class="dianji">
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="banner">
+    <div class="banxin3">
+        <div id="boxhdp" style="width:1920px;height:540px;">
+            <ul id="img">
+                <li class="current"><img src="./images/banner.jpg"></li>
+                <li><img src="./images/banner2.jpg"></li>
+                <li><img src="./images/banner3.jpg"></li>
+                <li><img src="./images/banner.jpg"></li>
+                <li><img src="./images/banner3.jpg"></li>
+            </ul>
+            <ul id="li">
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div style="clear: both;"></div>
+            <div class="an" id="an">
+                <a href="javascript:;" id="prev"><</a>
+                <a href="javascript:;" id="next" class="an-a2">></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="jishiqi">
+        <div class="banxin7"><h2>限时抢购</h2>
+        <div class="daojishi"></div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="banxin4">
+            <a href="message.html"><img src="images/news_03.gif"></a>
+            <a href="message.html"><img src="images/news_05.gif"></a>
+            <a href="message.html"><img src="images/news_07.gif" style="margin-right:20px"></a>
+        </div>
+    </div> 
+    <div class="main">
+         <div class="banxin5">
+             <h2>爆款单品</h2>
+            <div class="xilie">
+                <dl margin-left:40px;>
+                    <dt><a href=""><img src="images/main1.png"></a></dt>
+                    <dd>智能</dd>
+                </dl>
+                <dl>
+                   <dt><a href=""><img src="images/main2.png"></a></dt>
+                   <dd>花洒</dd>
+                </dl>
+               <dl>
+                   <dt><a href=""><img src="images/main3.png"></a></dt>
+                   <dd>浴室柜</dd>
+                </dl>
+               <dl>
+                   <dt><a href=""><img src="images/main4.png"></a></dt>
+                   <dd>马桶</dd>
+                </dl>
+               <dl>
+                   <dt><a href=""><img src="images/main5.png"></a></dt>
+                   <dd>厨房</dd>
+                </dl>
+               <dl>
+                   <dt><a href=""><img src="images/main6.png"></a></dt>
+                   <dd>龙头</dd>
+               </dl>
+               <dl>
+                   <dt><a href=""><img src="images/main7.png"></a></dt>
+                   <dd>晾衣架</dd>
+                </dl>
+                <dl>
+                   <dt><a href=""><img src="images/main8.png"></a></dt>
+                   <dd>挂件</dd>
+                </dl>
+                <dl style="margin-right:40px;">
+                   <dt><a href=""><img src="images/main9.png"></a></dt>
+                   <dd>小五金</dd>
+                </dl>
+            </div>
+            <div class="xilie2">
+                <div class="xilie2-1"><a href="message.html"><img src="images/main01_03.gif"></a></div>
+                <div class="xilie2-2">
+                    <a href="message.html"><img src="images/main01_05.gif" style=" margin-right: 25px;margin-left: 25px"></a>
+                    <a href="message.html"><img src="images/main01_07.gif"></a>
+                </div>
+                <div class="xilie2-3">
+                    <a href="message.html"><img src="images/main01_11.gif" style=" margin-right: 25px;margin-left: 25px"></a>
+                    <a href="message.html"><img src="images/main01_12.gif"></a>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="news1">
+          <div class="banxin6">
+              <a href="message.html"><img src="images/news01.jpg"></a>
+          </div>
+    </div>
+    <div class="main3">
+        <div class="banxin8">
+            <ul>
+                <li><a href=""><img src="images/main3_03.gif">2000余家服务网点</a></li>
+                <li><a href=""><img src="images/main3_05.gif">顺丰发货</a></li>
+                <li><a href=""><img src="images/main3_07.gif">15天无理由退货</a></li>
+                <li><a href=""><img src="images/main3_09.gif">100%正品保证</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="banxin9">
+          <div class="foot-left">
+            <ul>
+                <li><a href=""><h4>购物指南</h4></a></li>
+                <li><a href="">购物指南</a></li>
+                <li><a href="">客服工作时间</a></li>
+                <li><a href="">用户注册</a></li>
+                <li><a href="">优惠券使用中心</a></li>
+            </ul>
+            <ul>
+                <li><a href=""><h4>支付指南</h4></a></li>
+                <li><a href="">退款说明</a></li>
+                <li><a href="">付款时间</a></li>
+                <li><a href="">付款方式</a></li>
+            </ul>
+            <ul>
+                <li><a href=""><h4>配送验收</h4></a></li>
+                <li><a href="">验货与签收</a></li>
+                <li><a href="">配送方式</a></li>
+                <li><a href="">快递查询</a></li>
+                <li><a href="">免费仓储说明</a></li>
+            </ul>
+            <ul>
+                <li><a href=""><h4>售后服务</h4></a></li>
+                <li><a href="">发票服务</a></li>
+                <li><a href="">退换货服务</a></li>
+                <li><a href="">防伪查询</a></li>
+                <li><a href="">保障服务</a></li>
+                <li><a href="">总裁信箱</a></li>
+            </ul>
+            <ul style="margin-right: 20px;">
+                <li><a href=""><h4>商务合作</h4></a></li>
+                <li><a href="">企业团购</a></li>
+                <li><a href="">商家入驻</a></li>
+            </ul>
+          </div>
+          <div class="foot-right">
+            <h2>400-1919-999</h2>
+            <p>服务时间:8:00~20:00</p>
+            <div><a href=""><img src="images/foot_03.gif"></a></div>
+          </div>
+        </div>
+    </div>
+    <div class="feet">
+        <div class="banxin10">
+            <p>
+                Copyright&nbsp;2013-2018&nbsp;九牧厨卫股份有限公司&nbsp;版权所有&nbsp;保留一切权利&nbsp;闽ICP备11009004号-1
+            </p>
+        </div>
+    </div>
+        <script src="time.js"></script>
+        <script type="text/javascript">
+		hdp({
+			li:"li",	//默认值：li;默认用li包裹
+			boxid:"boxhdp",	//最外面div  id
+			imgid:"img",	//图片外面id
+			optid:"li",	//opt外面id	
+			an:"an",		//左右按钮id，用于移上显示和隐藏
+			prev:"prev",	//左边箭头id
+			next:"next",	//右边箭头id
+			ms:3000		//多少毫秒切换一张,默认800毫秒
+		})
+	</script>
+</body>
+</html>
